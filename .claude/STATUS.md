@@ -21,7 +21,7 @@ The copy holds upstream's `main` and the fork-versus-standalone question is open
 
 | workstream | state | owner | blocked on |
 |---|---|---|---|
-| Tooling layer | PR #1 open from `chore/claude-setup`; needs `_tooling` `feat/tracey-lint-comments` merged for the gate to read `.rs` markers | this session | architect re-review; `_tooling` PR |
+| Tooling layer | PR #1 open from `chore/claude-setup`; needs `_tooling` `feat/tracey-lint-comments` merged, because `tracey-lint` checks `.rs` markers only there and this repo's config cites that branch's probe cases | this session | architect re-review; `_tooling` PR |
 
 ## Unowned
 

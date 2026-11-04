@@ -6,9 +6,9 @@
 # no arguments, so every run is the full suite; for a subset call cargo directly. TEST_WORKERS
 # sets the build jobs and the test threads: default 8, 0 = serial, capped at 8.
 #
-# Skipped by full path, because Meta does not publish their fixtures: audio_loading::tests::
-# load_test_audio_file and multichannel_behavior
-# (DEBT-2026-11-04-no-audio-fixtures in docs/backlog/DEBT.md).
+# Skipped, because Meta does not publish their fixtures: the cases under audio_loading::tests::
+# load_test_audio_file and multichannel_behavior (DEBT-2026-11-04-no-audio-fixtures in
+# docs/backlog/DEBT.md). --skip matches a substring, so the trailing :: is what keeps a sibling test.
 set -euo pipefail
 PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -49,7 +49,7 @@ RC=0
 # _tooling/bin holds the session launcher `cc`, which a Rust link step would take for the C compiler.
 CARGO_PATH="$(printf %s "$PATH" | tr : '\n' | grep -v '/_tooling/bin/*$' | paste -sd: -)"
 PATH="$CARGO_PATH" cargo test --workspace --locked --no-fail-fast --jobs "$WORKERS" -- \
-  --test-threads="$WORKERS" --skip audio_loading::tests::load_test_audio_file --skip audio_loading::tests::multichannel_behavior || RC=$?
+  --test-threads="$WORKERS" --skip audio_loading::tests::load_test_audio_file:: --skip audio_loading::tests::multichannel_behavior:: || RC=$?
 
 # >>> tracey gate (from _tooling templates/tracey/requirements-README.md)
 # shortcut: trusts any file at $0's relative path (_tooling docs/backlog/DEBT.md DEBT-2026-10-11-tracey-gate-block-stale-dollar0)
