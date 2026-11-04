@@ -1,2 +1,7 @@
 .cargo
 target
+
+# agent tooling (CLAUDE.md "Copy model")
+/tmp/
+.claude/worktrees/
+.claude/runs/

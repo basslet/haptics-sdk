@@ -34,6 +34,7 @@ impl Iterator for Linspace {
 /// let x: Vec<f32> = haptic_dsp::linspace(0.0, 1.0, 5).collect();
 /// assert_eq!(x, vec![0.0, 0.25, 0.5, 0.75, 1.0]);
 /// ```
+// r[impl dsp.linspace]
 pub fn linspace(start: f32, end: f32, count: usize) -> Linspace {
     Linspace {
         start,
@@ -47,6 +48,7 @@ pub fn linspace(start: f32, end: f32, count: usize) -> Linspace {
 mod tests {
     use super::*;
 
+    // r[verify dsp.linspace]
     #[test]
     fn linspace_3_steps() {
         let mut l = linspace(0.0, 1.0, 3);
@@ -56,6 +58,7 @@ mod tests {
         assert_eq!(l.next(), None);
     }
 
+    // r[verify dsp.linspace]
     #[test]
     fn linspace_5_steps() {
         let mut l = linspace(1.0, 2.0, 5);
