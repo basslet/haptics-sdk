@@ -24,6 +24,7 @@ pub struct WindowedMovingRms {
 
 impl WindowedMovingRms {
     /// Initializes the window with a fixed size based on the specified parameters
+    // r[impl dsp.windowed-rms-length]
     pub fn new(averaging_time: f32, sample_rate: f32) -> Self {
         let delay_line = FixedDelayLine::new(averaging_time, sample_rate);
         let averaging_scaling_factor = 1.0 / delay_line.length_in_samples() as f32;
@@ -36,6 +37,7 @@ impl WindowedMovingRms {
     }
 
     /// Processes a single sample of input and returns the RMS of the last N samples received
+    // r[impl dsp.windowed-rms]
     pub fn process(&mut self, input: f32) -> f32 {
         let input_squared = input * input;
         let out_of_window = self.delay_line.process(input_squared);
@@ -52,6 +54,7 @@ impl WindowedMovingRms {
 mod tests {
     use super::*;
 
+    // r[verify dsp.windowed-rms]
     #[test]
     fn rms_with_2_sample_window() {
         let averaging_time = 2.0;
@@ -82,6 +85,7 @@ mod tests {
         assert_eq!(rms.process(1.0), 1.0);
     }
 
+    // r[verify dsp.windowed-rms]
     #[test]
     fn rms_with_4_sample_window() {
         let averaging_time = 0.5;

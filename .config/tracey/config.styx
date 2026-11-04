@@ -1,0 +1,16 @@
+// tracey 1.4.0 config. Requirements: docs/requirements/<area>.md. The code globs name this
+// repo's crates, and a verify marker counts anywhere in them, so no test_include is needed.
+// Name only what to scan: third-party/ stays out by not being named, and an exclude here
+// would read relative to each include's literal prefix.
+specs (
+  {
+    name requirements
+    include (docs/requirements/**/*.md)
+    impls (
+      {
+        name code
+        include (core/**/*.rs interfaces/**/*.rs)
+      }
+    )
+  }
+)
