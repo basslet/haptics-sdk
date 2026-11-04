@@ -16,7 +16,9 @@ The copy holds upstream's `main` and the fork-versus-standalone question is open
 |---|---|---|
 | 2026-11-04 | A private copy, not a fork, until the colleagues report | operator |
 | 2026-11-04 | The SDK is its own repo, traced at its own root | operator |
-| 2026-11-04 | The suite skips the fixture tests with a trailing `::`, so a sibling test still runs | agent |
+| 2026-11-04 | The suite skips the fixture tests by exact name with `--exact`, so no later test can hide behind the filter | operator |
+| 2026-11-04 | Outside review through OpenRouter is allowed for this repo and `basslet/haptics-studio`; it applies once PR #1 is on the base branch | operator |
+| 2026-11-04 | The operator reviews and merges this repo's PRs | operator |
 
 ## In flight
 

@@ -57,7 +57,7 @@ Rust stable, no venv. `.claude/context/builder.md` holds the mechanics.
 
 ## Suite
 
-`bash tests/run_all.sh` runs `cargo test` over the workspace and `_tooling/bin/tracey-gate`; a green run on a clean tree writes the push receipt `.githooks/pre-push` asks for. It skips the cases under `audio_loading::tests::load_test_audio_file::` and `audio_loading::tests::multichannel_behavior::`, because Meta does not publish their fixtures (`DEBT-2026-11-04-no-audio-fixtures` in `docs/backlog/DEBT.md`). Upstream's C++ tests stay outside it (`DEBT-2026-11-04-cpp-tests-outside-suite`). This repo has no CI workflow, as upstream has none.
+`bash tests/run_all.sh` runs `cargo test` over the workspace and `_tooling/bin/tracey-gate`; a green run on a clean tree writes the push receipt `.githooks/pre-push` asks for. It skips the cases of `audio_loading::tests::load_test_audio_file` and `audio_loading::tests::multichannel_behavior` by exact name, because Meta does not publish their fixtures (`DEBT-2026-11-04-no-audio-fixtures` in `docs/backlog/DEBT.md`). Upstream's C++ tests stay outside it (`DEBT-2026-11-04-cpp-tests-outside-suite`). This repo has no CI workflow, as upstream has none.
 
 ## Code conventions
 
