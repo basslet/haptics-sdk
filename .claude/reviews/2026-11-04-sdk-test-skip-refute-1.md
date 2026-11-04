@@ -1,7 +1,7 @@
 # Refute: test filter in `tests/run_all.sh`, record 1
 
 Head: `d7da3a1`  <-  `git rev-parse --short HEAD`
-Status of this verdict: one Claude pass. The second-model cross-check is outstanding (see "External verdict").
+Status of this verdict: complete. "Claude verdict" judged the old filter, "External verdict" the exact-name filter, and "Who judged what" says which claim each pass covers.
 
 ## Claim
 
@@ -129,3 +129,9 @@ Verdict, in full:
 > VERDICT: REFUTED, A later `harness = false` test target can ignore the forwarded libtest arguments and run a case having one of the twelve supposedly skipped names.
 
 Disposition: the refutation holds for a `harness = false` target only, and none exists in the workspace (`git grep -c 'harness *= *false' -- '*Cargo.toml'`). Such a target could run a test the list names, or read the arguments another way. `tests/run_all.sh` carries that limit as a `shortcut:` line. For libtest and rustdoc targets the verdict confirms the filter.
+
+## Who judged what
+
+- The Claude pass judged the old filter, two `--skip` group prefixes: refuted, planted tests hidden.
+- The external model judged the exact-name filter, `--exact` with the twelve full names: refuted only for a `harness = false` target.
+- The architect's pass on the exact-name filter agrees for libtest and rustdoc names, and adds one case: a test with one of the twelve full names in another crate is also skipped, because a name carries no crate. A test that fails when run, in its own binary: `./b --exact --skip audio_named` gives `1 passed; 0 failed; 1 filtered out`, and `./b` alone gives `1 passed; 1 failed` (`rustc --test b.rs -o b`, 2026-11-04).

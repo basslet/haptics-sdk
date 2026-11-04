@@ -9,7 +9,8 @@
 # Skipped by exact name, because Meta does not publish their fixtures (DEBT-2026-11-04-no-audio-fixtures
 # in docs/backlog/DEBT.md). --exact matters: alone, --skip matches any part of a name and also hides a
 # test added later. A new fixture test fails here until its name joins the list.
-# shortcut: a harness = false target reads these arguments its own way; read how it treats them if Meta adds one.
+# shortcut: a harness = false target reads these arguments its own way, and a test with one of these full
+# names in another crate is skipped too, since a name carries no crate; recheck if Meta adds either.
 set -euo pipefail
 PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
