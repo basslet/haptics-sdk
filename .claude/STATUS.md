@@ -16,12 +16,13 @@ The copy holds upstream's `main` and the fork-versus-standalone question is open
 |---|---|---|
 | 2026-11-04 | A private copy, not a fork, until the colleagues report | operator |
 | 2026-11-04 | The SDK is its own repo, traced at its own root | operator |
+| 2026-11-04 | The suite skips the fixture tests with a trailing `::`, so a sibling test still runs | agent |
 
 ## In flight
 
 | workstream | state | owner | blocked on |
 |---|---|---|---|
-| Tooling layer | PR #1 open from `chore/claude-setup`; needs `_tooling` `feat/tracey-lint-comments` merged, because `tracey-lint` checks `.rs` markers only there and this repo's config cites that branch's probe cases | this session | architect re-review; `_tooling` PR |
+| Tooling layer | PR #1 open from `chore/claude-setup`; needs `_tooling` PR #133 (`feat/tracey-lint-comments`) merged first, because `tracey-lint` checks `.rs` markers only there and this repo's config cites that branch's probe cases | this session | architect re-review; `_tooling` PR #133 |
 
 ## Unowned
 
@@ -30,7 +31,7 @@ The copy holds upstream's `main` and the fork-versus-standalone question is open
 
 ## Next action
 
-The architect re-reviews PR #1 after its first rejection, then the outside review runs.
+The architect re-reviews PR #1, then `/ponytail-review` and `pr-review` run on it; `_tooling` PR #133 merges first.
 
 ## Standing risks / not verified
 
