@@ -6,7 +6,8 @@
 # no arguments, so every run is the full suite; for a subset call cargo directly. TEST_WORKERS
 # sets the build jobs and the test threads: default 8, 0 = serial, capped at 8.
 #
-# Skipped by name: two audio tests whose fixtures Meta does not publish
+# Skipped by full path, because Meta does not publish their fixtures: audio_loading::tests::
+# load_test_audio_file and multichannel_behavior
 # (DEBT-2026-11-04-no-audio-fixtures in docs/backlog/DEBT.md).
 set -euo pipefail
 PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin:$HOME/.cargo/bin"
@@ -48,10 +49,10 @@ RC=0
 # _tooling/bin holds the session launcher `cc`, which a Rust link step would take for the C compiler.
 CARGO_PATH="$(printf %s "$PATH" | tr : '\n' | grep -v '/_tooling/bin/*$' | paste -sd: -)"
 PATH="$CARGO_PATH" cargo test --workspace --locked --no-fail-fast --jobs "$WORKERS" -- \
-  --test-threads="$WORKERS" --skip load_test_audio_file --skip multichannel_behavior || RC=$?
+  --test-threads="$WORKERS" --skip audio_loading::tests::load_test_audio_file --skip audio_loading::tests::multichannel_behavior || RC=$?
 
 # >>> tracey gate (from _tooling templates/tracey/requirements-README.md)
-# shortcut: trusts any file at $0's relative path (DEBT-2026-10-11-tracey-gate-block-stale-dollar0)
+# shortcut: trusts any file at $0's relative path (_tooling docs/backlog/DEBT.md DEBT-2026-10-11-tracey-gate-block-stale-dollar0)
 _tracey_top="$({ { [ -f "$0" ] && cd "$(dirname "$0")/.."; } 2>/dev/null || true; } && { git rev-parse --show-toplevel 2>/dev/null || pwd; })"
 if [ -f "$_tracey_top/.config/tracey/config.styx" ]; then
   echo "== tracey =="

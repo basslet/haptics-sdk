@@ -1,8 +1,9 @@
 // tracey 1.4.0 config, from _tooling templates/tracey/config.styx, changed for Rust.
 // Requirements: docs/requirements/<area>.md. The code globs name this repo's crates,
-// and tests are inline #[cfg(test)] modules, so no test_include is needed. Name only
-// what to scan: an exclude under such a glob is not honoured, and third-party/ stays
-// out by not being named (_tooling scripts/checks/probe_tracey.sh, cases R3 and R6).
+// and a verify marker counts anywhere in them, so no test_include is needed. Name only
+// what to scan: third-party/ stays out by not being named, and an exclude here would
+// read relative to each include's literal prefix (_tooling scripts/checks/probe_tracey.sh,
+// cases R3 and R6).
 specs (
   {
     name requirements

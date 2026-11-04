@@ -24,6 +24,7 @@ pub struct WindowedMovingRms {
 
 impl WindowedMovingRms {
     /// Initializes the window with a fixed size based on the specified parameters
+    // r[impl dsp.windowed-rms-length]
     pub fn new(averaging_time: f32, sample_rate: f32) -> Self {
         let delay_line = FixedDelayLine::new(averaging_time, sample_rate);
         let averaging_scaling_factor = 1.0 / delay_line.length_in_samples() as f32;
