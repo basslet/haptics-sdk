@@ -112,8 +112,8 @@ Natively integrated into professional audio middleware:
 
 ```bash
 # Clone the repository
-git clone git@github.com:facebook/meta-haptics-sdk.git
-cd meta-haptics-sdk
+git clone git@github.com:basslet/haptics-sdk.git
+cd haptics-sdk
 
 # Initialize submodules
 git submodule init
