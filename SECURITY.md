@@ -10,25 +10,28 @@ Haptics SDK is maintained by volunteers in their free time, so handling is best 
 
 ## Privacy: No Telemetry
 
-This SDK's own source contains no networking code and no telemetry. These statements come from searching the source; traffic from a running build has not been captured. Run these commands in a clone to check the source yourself. A control follows the checks: it must print the files searched, which shows the searches reach them. It does not show that a check's words would catch everything; see the limits below.
+This SDK's own source contains no networking code and no telemetry. These statements come from searching the source; traffic from a running build has not been captured. Run these commands in a clone to check the source yourself. Each check is followed by a control that must print the files searched, which shows the search reaches them. A control does not show that a check's words would catch everything; see the limits below.
 
 ```bash
 # No networking code: prints nothing
-git grep -nIiE 'socket|std::net|system\.net|netdb|winsock|getaddrinfo|tcp|udp|curl|httpclient|webclient|webrequest|fhttpmodule|networking|reqwest|hyper|new www|"http"|http\.(get|request)' -- core interfaces
+git grep -nIiE 'socket|std::net|system\.net|netdb|winsock|getaddrinfo|tcp|udp|curl|httpclient|webclient|webrequest|fhttpmodule|networking|reqwest|hyper|new www|"http"|http\.(get|request)|inet\.h|connect\(|openurl|httpmodule|winhttp|wininet|urlsession' -- core interfaces
+# Control: prints every text file searched
+git grep -lI "." -- core interfaces
+
 # No telemetry words: prints nothing
 git grep -nIiE 'telemetry|analytics|crash.?report|sentry|tracking|phone.?home' -- core interfaces
-# Control for both: prints every text file searched
+# Control: prints every text file searched
 git grep -lI "." -- core interfaces
 
 # No HTTP crates in any Cargo.toml: prints nothing
-git grep -nE 'reqwest|hyper|ureq|curl|surf|isahc|attohttpc|socket2|mio|tokio|async-std|(^|[^a-z0-9_-])(http|h2)( |=|\.|")|dependencies\.(http|h2)' -- '*Cargo.toml'
+git grep -nE 'reqwest|hyper|ureq|curl|surf|isahc|attohttpc|socket2|mio|tokio|async-std|rustls|native-tls|openssl|tungstenite|actix|quinn|smol|http-body|(^|[^a-z0-9_-])(http|h2)( |=|\.|")|dependencies\.(http|h2)' -- '*Cargo.toml'
 # Control: prints every Cargo.toml searched
 git grep -l "." -- '*Cargo.toml'
 ```
 
 Limits of this statement:
 
-- A text search finds only the words it names, so these checks are evidence, not proof.
+- A text search finds only the words it names. The lists hold common names, not every way to reach a network, and a program this code started would not show up, so these checks are evidence, not proof.
 - It covers this repository's source in `core/` and `interfaces/`, and the names in its `Cargo.toml` files.
 - It does not cover `third-party/` (OpenXR, GoogleTest and JsonCpp), because these are submodules and `git grep` does not search inside them.
 - It does not cover the code of the crates this project uses, whether listed directly or pulled in by others (see `Cargo.lock`).

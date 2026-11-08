@@ -11,7 +11,7 @@ We welcome your pull requests. They are reviewed and merged in this repository.
 1. Fork the repository and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
-4. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test -p haptic_dsp -p haptic_data -p haptic_renderer`. The audio-loading tests in `haptic_audio_analysis` need audio files that are not in this repository, so they fail for now.
+4. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test --workspace`. The audio-loading tests in `haptic_audio_analysis` fail for now, because they need audio files that are not in this repository. Everything else must pass.
 5. Keep code changes and documentation changes in separate commits, so code changes can be taken to other copies of this project without the docs.
 
 ## Issues
