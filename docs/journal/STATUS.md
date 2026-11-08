@@ -9,7 +9,7 @@ Haptics SDK is an independent project built on the code Meta released under the 
 
 ## Before the repository opens
 
-- Remove the leftover internal setup material, and turn on vulnerability reporting. Both are in [debt.md](debt.md).
+- Remove the leftover internal setup material. See [debt.md](debt.md), which also lists what to turn on once it is public.
 
 ## Waiting on people
 
