@@ -17,9 +17,6 @@ devices daily.
   - [Prerequisites](#prerequisites)
   - [Quick Start](#quick-start)
   - [Building](#building)
-- [Examples](#examples)
-- [How It Works](#how-it-works)
-- [Design Philosophy](#design-philosophy)
 - [Documentation](#documentation)
 - [FAQ](#faq)
 - [Contributing](#contributing)
@@ -61,7 +58,7 @@ PCM-based systems and those based on simple amplitude curves.
 
 ## Industry Adoption
 
-Meta Haptics SDK serves as the core haptic rendering technology in major tools
+Haptics SDK serves as the core haptic rendering technology in major tools
 and platforms:
 
 ### Audio Middleware
@@ -83,7 +80,7 @@ Natively integrated into professional audio middleware:
 
 ### Design Tools
 
-- **[Meta Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio)** -
+- **[Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio)** -
   Professional haptic design tool using this SDK as its core renderer on
   Windows, Mac and Meta Quest's Android based runtime.
 
@@ -139,18 +136,20 @@ The justfile in the directory of each component contains the CMake commands.
 
 ### Complete Documentation Set
 
-| Document                                                             | Description                                    |
-| -------------------------------------------------------------------- | ---------------------------------------------- |
-| **[Parametric Haptic Renderer](core/renderer_parametric/README.md)** | Complete documentation and integration example |
-| **[Parametric Haptic Data](core/haptic_data_parametric/README.md)**  | Short description                              |
-| **[.haptic File Spec](resources/haptic-file-spec.md)**               | Format specification with validation rules     |
-| **[ACF Specification](resources/acf/README.md)**                     | Tuning guide and parameter reference           |
-| **[Unity PCM Haptics](interfaces/unity/PCMHaptics/README.md)**       | Complete integration example                   |
-| **[Unreal PCM Haptics](interfaces/unreal/PCMHaptics/README.md)**     | Complete integration example                   |
+| Document                                                             | Description                                           |
+| -------------------------------------------------------------------- | ----------------------------------------------------- |
+| **[How It Works](docs/how-it-works.md)**                             | Architecture, rendering process and design philosophy |
+| **[Examples](docs/examples.md)**                                     | Authoring files, parsing, rendering and integration   |
+| **[Parametric Haptic Renderer](core/renderer_parametric/README.md)** | Complete documentation and integration example        |
+| **[Parametric Haptic Data](core/haptic_data_parametric/README.md)**  | Short description                                     |
+| **[.haptic File Spec](resources/haptic-file-spec.md)**               | Format specification with validation rules            |
+| **[ACF Specification](resources/acf/README.md)**                     | Tuning guide and parameter reference                  |
+| **[Unity PCM Haptics](interfaces/unity/PCMHaptics/README.md)**       | Complete integration example                          |
+| **[Unreal PCM Haptics](interfaces/unreal/PCMHaptics/README.md)**     | Complete integration example                          |
 
 ### External Resources
 
-- **[Meta Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio)** -
+- **[Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio)** -
   Design tool for creating .haptic files
 
 ---
@@ -159,7 +158,7 @@ The justfile in the directory of each component contains the CMake commands.
 
 ### General Questions
 
-**Q: What platforms does Meta Haptics SDK support?**
+**Q: What platforms does Haptics SDK support?**
 
 **A: The SDK is platform-agnostic C/C++ code.** It runs on Windows, macOS,
 Linux, and consoles. Integration examples focus on Meta Quest via OpenXR.
@@ -216,7 +215,7 @@ click-like events).
 
 ### Compatibility Questions
 
-**Q: Can I use .haptic files created in Meta Haptics Studio?**
+**Q: Can I use .haptic files created in Haptics Studio?**
 
 **A: Absolutely!** That's the primary design workflow. Studio exports .haptic
 files that this SDK renders at runtime.
@@ -245,7 +244,7 @@ See our [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## License
 
-Meta Haptics SDK is released under the MIT License. See [LICENSE](LICENSE) for
+Haptics SDK is released under the MIT License. See [LICENSE](LICENSE) for
 details.
 
 ---
@@ -257,7 +256,7 @@ Open an issue or check our [documentation](#documentation).
 **Ready to design haptics?**
 
 Download
-[Meta Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio).
+[Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio).
 
 ---
 

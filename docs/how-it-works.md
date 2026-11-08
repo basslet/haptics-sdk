@@ -1,6 +1,6 @@
 ## How It Works
 
-Meta Haptics SDK is a haptic rendering library with a five-component
+Haptics SDK is a haptic rendering library with a five-component
 architecture that separates content from hardware.
 
 ### Core Components
@@ -39,11 +39,11 @@ The SDK consists of five main components that work together:
 
 ### Rendering Process
 
-Meta Haptics SDK interpolates between hardware-agnostic parametric control
+Haptics SDK interpolates between hardware-agnostic parametric control
 points, and based on the ACF, renders the optimal output for the platform API or
 device hardware.
 
-![Haptics SDK Rendering Process](resources/images/haptic_file_spec/system-overview-rendering.png)
+![Haptics SDK Rendering Process](../resources/images/haptic_file_spec/system-overview-rendering.png)
 
 _The renderer processes time-based control points (amplitude, frequency,
 transients) and generates device-specific output samples._
@@ -58,13 +58,13 @@ This separation enables:
 
 ## Design Philosophy
 
-Meta Haptics SDK uses **normalized, parametric data** to distinctly separate
+Haptics SDK uses **normalized, parametric data** to distinctly separate
 design-time concerns from runtime implementation. This approach provides
 significant benefits for both content creators and system integrators.
 
 ### A Low-Level Building Block for Haptic Systems
 
-Meta Haptics SDK is a **haptic rendering and data processing library** designed
+Haptics SDK is a **haptic rendering and data processing library** designed
 to be integrated into larger systems. It focuses on a single responsibility:
 efficiently converting device-agnostic vibrotactile data into device and
 platform-specific output.
@@ -136,3 +136,17 @@ Many systems use PCM (Pulse Code Modulation) as their haptic data format, but
 **Parametric data** solves this by describing _what_ to feel (amplitude,
 frequency, transients), not _how_ motors should move. The renderer handles
 hardware translation at runtime.
+
+---
+
+## Documentation
+
+| Document                                                                | Description                                         |
+| ----------------------------------------------------------------------- | --------------------------------------------------- |
+| **[Examples](examples.md)**                                             | Authoring files, parsing, rendering and integration |
+| **[Parametric Haptic Renderer](../core/renderer_parametric/README.md)** | Complete documentation and integration example      |
+| **[Parametric Haptic Data](../core/haptic_data_parametric/README.md)**  | Short description                                   |
+| **[.haptic File Spec](../resources/haptic-file-spec.md)**               | Format specification with validation rules          |
+| **[ACF Specification](../resources/acf/README.md)**                     | Tuning guide and parameter reference                |
+| **[Unity PCM Haptics](../interfaces/unity/PCMHaptics/README.md)**       | Complete integration example                        |
+| **[Unreal PCM Haptics](../interfaces/unreal/PCMHaptics/README.md)**     | Complete integration example                        |

@@ -10,7 +10,7 @@
 {
   "version": {"major": 1, "minor": 0, "patch": 0},
   "metadata": {
-    "editor": "Meta Haptics Studio",
+    "editor": "Haptics Studio",
     "description": "Button click effect"
   },
   "signals": {
@@ -46,11 +46,11 @@
   via ACF
 
 **Design Tools:** Create `.haptic` files visually using
-[Meta Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio)
+[Haptics Studio](https://developers.meta.com/horizon/resources/haptics-studio)
 or author them by hand.
 
 **.haptic Specification:**
-[`resources/haptic-file-spec.md`](resources/haptic-file-spec.md)
+[`resources/haptic-file-spec.md`](../resources/haptic-file-spec.md)
 
 ### 2. Authoring an Actuator Configuration File (ACF)
 
@@ -91,17 +91,17 @@ data (0.0-1.0) into hardware-appropriate parameters.
 
 #### Provided ACF Templates
 
-- **[`Generic-Console-PCM.acf`](resources/acf/Generic-Console-PCM.acf)** - Full
+- **[`Generic-Console-PCM.acf`](../resources/acf/Generic-Console-PCM.acf)** - Full
   waveform synthesis (PlayStation® DualSense, etc.)
-- **[`Generic-Console-SimpleHaptics.acf`](resources/acf/Generic-Console-SimpleHaptics.acf)** -
+- **[`Generic-Console-SimpleHaptics.acf`](../resources/acf/Generic-Console-SimpleHaptics.acf)** -
   Amplitude-only output (Xbox, etc.)
-- **[`Meta-Quest.acf`](resources/acf/MetaQuest.acf)** - Meta Quest controller
+- **[`Meta-Quest.acf`](../resources/acf/MetaQuest.acf)** - Meta Quest controller
   tuning
 
 **Tuning Your ACF:** Start with a template and tune by feel. Adjust frequency
 ranges based on your actuator's datasheet and perceptual testing.
 
-**ACF Specification:** [`resources/acf/README.md`](resources/acf/README.md)
+**ACF Specification:** [`resources/acf/README.md`](../resources/acf/README.md)
 
 ### 3. Parsing and Rendering Haptic Data in C++
 
@@ -115,13 +115,13 @@ examples above). Then do the following:
 3. From an update loop or callback, preferably running at a fixed clock rate,
    drive ParametricHapticRenderer in realtime.
 
-**[View Parametric Haptic Renderer Example](core/renderer_parametric/README.md)**
+**[View Parametric Haptic Renderer Example](../core/renderer_parametric/README.md)**
 
 ### 4. PCM Haptics for Unity and Unreal
 
 Complete integration examples for Unity and Unreal demonstrating how to render haptics on
 devices that implement OpenXR PCM haptics (Meta Quest).
 
-**[View Unity Example](interfaces/unity/PCMHaptics/README.md)**
+**[View Unity Example](../interfaces/unity/PCMHaptics/README.md)**
 
-**[View Unreal Example](interfaces/unreal/PCMHaptics/README.md)**
+**[View Unreal Example](../interfaces/unreal/PCMHaptics/README.md)**
