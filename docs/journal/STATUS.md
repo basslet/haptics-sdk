@@ -7,6 +7,10 @@ Haptics SDK is an independent project built on the code Meta released under the 
 - **Releases:** none. This repository has no tags and no GitHub releases.
 - **Continuous integration:** no workflow builds the code or runs its tests.
 
+## Before the repository opens
+
+- Remove the leftover internal setup material, and turn on vulnerability reporting. Both are in [debt.md](debt.md).
+
 ## Waiting on people
 
 - [Platform support and integration concepts](https://github.com/basslet/haptics-sdk/issues/7): confirmation from Meta on adapting facts from its public documentation.
