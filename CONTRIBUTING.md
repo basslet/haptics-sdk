@@ -16,8 +16,9 @@ We welcome your pull requests. They are reviewed and merged in this repository.
 1. Fork the repository and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
-4. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test --workspace`.
-5. Keep code changes and documentation changes in separate commits, so code changes can be taken to other copies of this project without the docs.
+4. If you've changed a documentation page, run `node scripts/check_doc_links.js`. It checks links and the navigation block at the top of each page; `node scripts/check_doc_links.js --fix` writes the block.
+5. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test --workspace`.
+6. Keep code changes and documentation changes in separate commits, so code changes can be taken to other copies of this project without the docs.
 
 ## Issues
 

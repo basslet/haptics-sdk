@@ -5,7 +5,7 @@ Haptics SDK is an independent project built on the code Meta released under the 
 - **Visibility:** the repository is private and is being prepared to go public.
 - **Current work:** a documentation restructure across Haptics SDK, [Haptics Studio](https://github.com/basslet/haptics-studio) and [Haptics Studio Examples](https://github.com/basslet/haptics-studio-examples). The plan and its open questions are in [the tracker](https://github.com/basslet/haptics-studio/issues/5).
 - **Releases:** none. This repository has no tags and no GitHub releases.
-- **Continuous integration:** no workflow builds the code or runs its tests.
+- **Continuous integration:** one workflow runs the documentation lint on every pull request. No workflow builds the code or runs its tests.
 
 ## Before the repository opens
 
