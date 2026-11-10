@@ -1,4 +1,9 @@
-[Haptics SDK](README.md) · [How It Works](docs/how-it-works.md) · [Examples](docs/examples.md) · [Contributing](CONTRIBUTING.md) · [Haptics Studio](https://github.com/basslet/haptics-studio) · [Haptics Studio Examples](https://github.com/basslet/haptics-studio-examples)
+| | |
+| :--- | :--- |
+| **Haptics Studio** | [Getting Started](https://github.com/basslet/haptics-studio) · [Design & Integration](https://github.com/basslet/haptics-studio/blob/main/docs/design-and-integration.md) · [Architecture](https://github.com/basslet/haptics-studio/blob/main/docs/architecture.md) |
+| **Haptics SDK** | [Overview](README.md) · [Getting Started](docs/getting-started.md) · [Documentation](docs/README.md) |
+| **Haptics Studio Examples** | [Overview](https://github.com/basslet/haptics-studio-examples) · [Guidelines](https://github.com/basslet/haptics-studio-examples/blob/main/1%20Design%20Guidelines/README.md) · [Examples](https://github.com/basslet/haptics-studio-examples/blob/main/2%20Design%20Examples/README.md) · [Code](https://github.com/basslet/haptics-studio-examples/blob/main/3%20Integration%20%26%20Code%20Snippets/README.md) · [Knowledge](https://github.com/basslet/haptics-studio-examples/blob/main/4%20Knowledge%20Base/README.md) · [Skills](https://github.com/basslet/haptics-studio-examples/blob/main/5%20Skills/README.md) |
+| **General** | [Code of Conduct](CODE_OF_CONDUCT.md) · [Contributing](CONTRIBUTING.md) · [License](LICENSE) · **▸ Security** |
 
 # Security and Privacy
 
@@ -38,5 +43,3 @@ Limits of this statement:
 - It does not cover Meta's own *Meta Haptics SDK for Unity* and *Meta Haptics SDK for Unreal* packages, the OpenXR runtime that the Unity and Unreal examples hand haptics to, or the game engine or application you build this into.
 - It covers the SDK, not the tools around it. [Haptics Studio](https://github.com/basslet/haptics-studio) and [Haptics Studio Examples](https://github.com/basslet/haptics-studio-examples) are separate repositories.
 - Building is different from running: Cargo downloads crates, and `git submodule update` downloads the submodules.
-
-[Haptics SDK](README.md) · [How It Works](docs/how-it-works.md) · [Examples](docs/examples.md) · [Contributing](CONTRIBUTING.md) · [Haptics Studio](https://github.com/basslet/haptics-studio) · [Haptics Studio Examples](https://github.com/basslet/haptics-studio-examples)

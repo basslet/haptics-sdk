@@ -1,4 +1,9 @@
-[Haptics SDK](README.md) · [How It Works](docs/how-it-works.md) · [Examples](docs/examples.md) · [Contributing](CONTRIBUTING.md) · [Haptics Studio](https://github.com/basslet/haptics-studio) · [Haptics Studio Examples](https://github.com/basslet/haptics-studio-examples)
+| | |
+| :--- | :--- |
+| **Haptics Studio** | [Getting Started](https://github.com/basslet/haptics-studio) · [Design & Integration](https://github.com/basslet/haptics-studio/blob/main/docs/design-and-integration.md) · [Architecture](https://github.com/basslet/haptics-studio/blob/main/docs/architecture.md) |
+| **Haptics SDK** | [Overview](README.md) · [Getting Started](docs/getting-started.md) · [Documentation](docs/README.md) |
+| **Haptics Studio Examples** | [Overview](https://github.com/basslet/haptics-studio-examples) · [Guidelines](https://github.com/basslet/haptics-studio-examples/blob/main/1%20Design%20Guidelines/README.md) · [Examples](https://github.com/basslet/haptics-studio-examples/blob/main/2%20Design%20Examples/README.md) · [Code](https://github.com/basslet/haptics-studio-examples/blob/main/3%20Integration%20%26%20Code%20Snippets/README.md) · [Knowledge](https://github.com/basslet/haptics-studio-examples/blob/main/4%20Knowledge%20Base/README.md) · [Skills](https://github.com/basslet/haptics-studio-examples/blob/main/5%20Skills/README.md) |
+| **General** | [Code of Conduct](CODE_OF_CONDUCT.md) · **▸ Contributing** · [License](LICENSE) · [Security](SECURITY.md) |
 
 # Contributing to Open Source Projects
 
@@ -11,8 +16,9 @@ We welcome your pull requests. They are reviewed and merged in this repository.
 1. Fork the repository and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
-4. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test --workspace`.
-5. Keep code changes and documentation changes in separate commits, so code changes can be taken to other copies of this project without the docs.
+4. If you've changed a documentation page, run `node scripts/check_doc_links.js`. It checks links and the navigation block at the top of each page; `node scripts/check_doc_links.js --fix` writes the block.
+5. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test --workspace`.
+6. Keep code changes and documentation changes in separate commits, so code changes can be taken to other copies of this project without the docs.
 
 ## Issues
 
@@ -103,5 +109,3 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 
 For answers to common questions about this code of conduct, see
 https://www.contributor-covenant.org/faq
-
-[Haptics SDK](README.md) · [How It Works](docs/how-it-works.md) · [Examples](docs/examples.md) · [Contributing](CONTRIBUTING.md) · [Haptics Studio](https://github.com/basslet/haptics-studio) · [Haptics Studio Examples](https://github.com/basslet/haptics-studio-examples)
