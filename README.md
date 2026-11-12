@@ -5,7 +5,11 @@
 | **Haptics Studio Examples** | [Overview](https://github.com/basslet/haptics-studio-examples) · [Guidelines](https://github.com/basslet/haptics-studio-examples/blob/main/1%20Design%20Guidelines/README.md) · [Examples](https://github.com/basslet/haptics-studio-examples/blob/main/2%20Design%20Examples/README.md) · [Code](https://github.com/basslet/haptics-studio-examples/blob/main/3%20Integration%20%26%20Code%20Snippets/README.md) · [Knowledge](https://github.com/basslet/haptics-studio-examples/blob/main/4%20Knowledge%20Base/README.md) · [Skills](https://github.com/basslet/haptics-studio-examples/blob/main/5%20Skills/README.md) |
 | **General** | [Code of Conduct](CODE_OF_CONDUCT.md) · [Contributing](CONTRIBUTING.md) · [License](LICENSE) · [Security](SECURITY.md) |
 
-<img src="resources/images/logo/Transparent/Banner-SDK-Transparent.png" alt="Haptics SDK Logo" style="width:95%; max-width:800px; display:block; margin-left:auto; margin-right:auto;">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./resources/images/logo/Banner-SDK-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./resources/images/logo/Banner-SDK-light.png">
+  <img alt="Haptics SDK" src="./resources/images/logo/Banner-SDK-light.png" width="800">
+</picture>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
