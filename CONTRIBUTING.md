@@ -1,34 +1,37 @@
-# Contributing to Meta Open Source Projects
+| | |
+| :--- | :--- |
+| **Haptics Studio** | [Overview](https://github.com/basslet/haptics-studio) · [Design & Integration](https://github.com/basslet/haptics-studio/blob/main/docs/design-and-integration/README.md) · [Source Code](https://github.com/basslet/haptics-studio/blob/main/docs/building.md) · [Architecture](https://github.com/basslet/haptics-studio/blob/main/docs/architecture.md) |
+| **Haptics SDK** | [Overview](README.md) · [Getting Started](docs/getting-started.md) · [Documentation](docs/README.md) |
+| **Haptics Studio Examples** | [Overview](https://github.com/basslet/haptics-studio-examples) · [Guidelines](https://github.com/basslet/haptics-studio-examples/blob/main/1%20Design%20Guidelines/README.md) · [Examples](https://github.com/basslet/haptics-studio-examples/blob/main/2%20Design%20Examples/README.md) · [Code](https://github.com/basslet/haptics-studio-examples/blob/main/3%20Integration%20%26%20Code%20Snippets/README.md) · [Knowledge](https://github.com/basslet/haptics-studio-examples/blob/main/4%20Knowledge%20Base/README.md) · [Skills](https://github.com/basslet/haptics-studio-examples/blob/main/5%20Skills/README.md) |
+| **General** | [Code of Conduct](CODE_OF_CONDUCT.md) · **▸ Contributing** · [License](LICENSE) · [Security](SECURITY.md) |
 
-We want to make contributing to this project as easy and transparent as
-possible.
+# Contributing to Haptics SDK
+
+We want to make contributing to this project as easy and transparent as possible. Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Pull Requests
-We actively welcome your pull requests.
 
-Note: pull requests are not imported into the GitHub directory in the usual way. There is an internal Meta repository that is the "source of truth" for the project. The GitHub repository is generated *from* the internal Meta repository. So we don't merge GitHub PRs directly to the GitHub repository -- they must first be imported into internal Meta repository. When Meta employees look at the GitHub PR, there is a special button visible only to them that executes that import. The changes are then automatically reflected from the internal Meta repository back to GitHub. This is why you won't see your PR having being directly merged, but you still see your changes in the repository once it reflects the imported changes.
+We welcome your pull requests. They are reviewed and merged in this repository.
 
-1. Fork the repo and create your branch from `main`.
+1. Fork the repository and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. If you haven't already, complete the Contributor License Agreement ("CLA").
-
-## Contributor License Agreement ("CLA")
-In order to accept your pull request, we need you to submit a CLA. You only need
-to do this once to work on any of Meta's open source projects.
-
-Complete your CLA here: <https://code.facebook.com/cla>
+4. If you've changed a documentation page, run `node scripts/check_doc_links.js`. It checks links and the navigation block at the top of each page; `node scripts/check_doc_links.js --fix` writes the block.
+5. Make sure the tests pass: run `just` (see [Building](README.md#building)) and `cargo test --workspace`.
+6. Keep code changes and documentation changes in separate commits, so code changes can be taken to other copies of this project without the docs.
 
 ## Issues
-We use GitHub issues to track public bugs. Please ensure your description is
-clear and has sufficient instructions to be able to reproduce the issue.
 
-Meta has a [bounty program](https://www.facebook.com/whitehat/) for the safe
-disclosure of security bugs. In those cases, please go through the process
-outlined on that page and do not file a public issue.
+We use GitHub issues to track bugs and requests. Please describe the problem clearly, with enough detail to reproduce it, and include the commit you use and your operating system. The project is maintained by volunteers in their free time, so reviews and answers are best effort, with no promised response time.
+
+## Security
+
+Do not report security problems in a public issue. See [SECURITY.md](SECURITY.md).
 
 ## License
-By contributing to this project, you agree that your contributions will be licensed
-under the LICENSE file in the root directory of this source tree.
+
+By contributing, you agree that your contributions are licensed under the [LICENSE](LICENSE) file in the root of this repository. No Contributor License Agreement is required.
+
+## Relationship to Meta
+
+Haptics SDK was created by the Meta Haptics team (formerly Lofelt) and released by Meta under the MIT license. This repository is an independent project, not affiliated with, endorsed by, or supported by Meta Platforms, Inc. Meta's internal process, its Contributor License Agreement and its bounty program do not apply here.

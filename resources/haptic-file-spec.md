@@ -1,10 +1,17 @@
+| | |
+| :--- | :--- |
+| **Haptics Studio** | [Overview](https://github.com/basslet/haptics-studio) · [Design & Integration](https://github.com/basslet/haptics-studio/blob/main/docs/design-and-integration/README.md) · [Source Code](https://github.com/basslet/haptics-studio/blob/main/docs/building.md) · [Architecture](https://github.com/basslet/haptics-studio/blob/main/docs/architecture.md) |
+| **Haptics SDK** | [Overview](../README.md) · [Getting Started](../docs/getting-started.md) · [Documentation](../docs/README.md) |
+| **Haptics Studio Examples** | [Overview](https://github.com/basslet/haptics-studio-examples) · [Guidelines](https://github.com/basslet/haptics-studio-examples/blob/main/1%20Design%20Guidelines/README.md) · [Examples](https://github.com/basslet/haptics-studio-examples/blob/main/2%20Design%20Examples/README.md) · [Code](https://github.com/basslet/haptics-studio-examples/blob/main/3%20Integration%20%26%20Code%20Snippets/README.md) · [Knowledge](https://github.com/basslet/haptics-studio-examples/blob/main/4%20Knowledge%20Base/README.md) · [Skills](https://github.com/basslet/haptics-studio-examples/blob/main/5%20Skills/README.md) |
+| **General** | [Code of Conduct](../CODE_OF_CONDUCT.md) · [Contributing](../CONTRIBUTING.md) · [License](../LICENSE) · [Security](../SECURITY.md) |
+
 # .haptic File Specification 1.0
 
 ## Overview
 
 The `.haptic` file format is a device-agnostic, JSON-based standard for
 representing vibrotactile haptic effects. It is intended to facilitate reliable
-interchange between authoring tools (such as Meta Haptics Studio), SDKs, and
+interchange between authoring tools (such as Haptics Studio), SDKs, and
 runtime engines.
 
 This specification abstracts the design intent of haptic effects, decoupling
@@ -58,7 +65,7 @@ The simplest valid `.haptic` file contains only the required fields:
 {
   "version": {"major": 1, "minor": 0, "patch": 0},
   "metadata": {
-    "editor": "Meta Haptics Studio 2.1",
+    "editor": "Haptics Studio",
     "source": "example-sound.wav",
     "project": "example-project.hasp",
     "tags": [],
@@ -150,7 +157,7 @@ association, and descriptive tags.
 
 ```json
 "metadata": {
-  "editor": "Meta Haptics Studio 2.1",
+  "editor": "Haptics Studio",
   "source": "example-sound.wav",
   "project": "example-project.hasp",
   "tags": ["example", "demo"],
@@ -330,7 +337,7 @@ pair that defines how the pitch of the haptic effect changes over time.
 {
   "version": {"major": 1, "minor": 0, "patch": 0},
   "metadata": {
-    "editor": "Meta Haptics Studio 2.1",
+    "editor": "Haptics Studio",
     "source": "gear.wav",
     "project": "machine-interactions.hasp",
     "tags": [],
